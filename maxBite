@@ -1,0 +1,29 @@
+package com.javarush.task.task18.task1801;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+/* 
+Максимальный байт
+*/
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        FileInputStream inputStream = new FileInputStream("/home/vint/Документы/file.txt");
+        int maxBite = inputStream.read();
+        System.out.println(maxBite);
+
+        while (inputStream.available()>0)
+        {
+            int x = Integer.toinputStream.read();
+            if (x>maxBite)
+            {
+                maxBite = x;
+            }
+        }
+        inputStream.close();
+        System.out.println(maxBite);
+
+
+    }
+}
